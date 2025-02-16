@@ -29,6 +29,15 @@ public class FiniteAutomaton {
             currentState = delta.getOrDefault(currentState, new HashMap<>()).getOrDefault(symbol, "");
             if (currentState.isEmpty()) return false;
         }
+
+        System.out.println("Finite Automaton Transitions:");
+        for (String state : delta.keySet()) {
+            for (Character symbol : delta.get(state).keySet()) {
+                System.out.println(state + " --" + symbol + "--> " + delta.get(state).get(symbol));
+            }
+        }
+
+
         return F.contains(currentState);
     }
 }

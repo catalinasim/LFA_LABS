@@ -1,0 +1,12 @@
+Variant 28:
+VN={S, A, B, C},
+VT={a, b},
+P={
+    S → aA
+    A → bS
+    A → aB
+    B → bC
+    C → aA
+    B → aB
+    C → b
+}
